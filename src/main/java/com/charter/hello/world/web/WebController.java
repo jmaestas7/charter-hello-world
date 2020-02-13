@@ -35,7 +35,7 @@ public class WebController {
 	// HelloWorldResponse we already istantiated and made equal to the
 	// in the postMethod
 	@ResponseBody
-	public HelloWorldResponse gettMethod() {
+	public HelloWorldResponse getMethod() {
 		return response;
 	}
 }
