@@ -16,13 +16,18 @@ public class HelloWorldResponse {
 	}
 
 	public void setMessage(String message) {
-		this.message = message;
+		if (message.isEmpty()) {
+			this.message = "Hello world!";
+		} else {
+			this.message = message;
+		}
 	}
 
 	// had to add empty constructor method otherwise pointing to a null or empty
 	// constructor that was istantiated with the message field would not point
 	// to the same location and therefore could not be overwritten
 	public HelloWorldResponse() {
+		this.message = "Hello world!";
 	}
 
 	public HelloWorldResponse(String message) {
